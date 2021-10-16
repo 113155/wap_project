@@ -16,76 +16,75 @@
         grid-template-columns: 1fr;
         z-index: 5;
       }
-      /* .navCon{
-        display: grid;
-        grid-template-columns: auto;
-        position:sticky;
-        grid-column: auto;
-        grid-row: 1/2;
-        
-        
-      }
-      .itemCon{
-        grid-column: auto;
-        grid-row: 2/2;
-      } */
+      
       .containerPro {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         padding: 10px;
-        padding-top: 100px;
+        grid-gap:10px;
       }
       .dropdown-item:hover {
         background-color: lightskyblue;
       }
       .mySign:hover {
         border-color: white;
+        text-size-adjust: 10px;
       }
       .myLogo:hover {
-        border-color: 5px solid white !important;
+        border-color: white;
       }
       .laptop {
         grid-column: 1/3;
         grid-row: 1/3;
+        background-color:wheat;
       }
       .pet {
         grid-column: 3/5;
         grid-row: 1/3;
+        background-color:powderblue;
       }
       .toy {
         grid-column: 5/7;
         grid-row: 1/3;
+        background-color: sandybrown;
       }
       .jacket {
         grid-column: 1/3;
         grid-row: 3/5;
         height: 600px;
+        background-color:slategray ;
       }
       .shoes {
         grid-column: 3/5;
         grid-row: 3/4;
         height: 330px;
+        background-color:thistle ;
       }
       .flashDrive {
         grid-column: 3/5;
         grid-row: 4/5;
         height: 275px;
+        background-color:palegoldenrod;
       }
       .fridge {
         grid-column: 5/7;
         grid-row: 3/5;
+        background-color: olivedrab;
       }
       .iPhone13Case {
         grid-column: 1/3;
         grid-row: 5/7;
+        background-color: mediumaquamarine;
       }
       .book {
         grid-column: 3/5;
         grid-row: 5/7;
+        background-color: lightslategray;
       }
       .mug {
         grid-column: 5/7;
         grid-row: 5/7;
+        background-color: khaki;
       }
       .containerSign{
           display: grid;
@@ -105,100 +104,112 @@
         grid-column: 2/3;
         grid-row: 3/10;
       }
-      .address:cli{
-        display: onclick;
-      }
       #location:hover{
         border: 1px solid black !important;
+      }
+      #iddd{
+        display: none;
+        position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 40%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+   /* Fallback color */
+  background-color: white; /* Black w/ opacity */
+  margin-left: 50px;
+  margin-top: 80px;
+
+      }
+      .pos{
+        display: grid;
+            grid-template-columns: 1fr 2fr 5fr 1fr 1fr 2fr;
+            background-color: black;
+            text-decoration: white;
+            border-top: 5px solid white;
+            border-right: 10px solid white;
+            border-left: 10px solid white;
+            border-bottom: 1px solid white;
+            max-width: 2300;
+            height: 90px;
+            align-items: center;
+      }
+      .language{
+        padding-left: 20px;
+        margin-right: 100px;
       }
     </style>
   </head>
   <body>
     <div class="parentCon">
-      <div class="navCon">
-    <nav class="navbar navbar-expand-sm bg-dark text-white pb-3 pos">
-      <div class="container-fluid">
-        <div class="row myLogo">
+    <div class="navCon">
+    <nav class="navbar navbar-expand-sm bg-dark text-white pb-3 pos ">
+        <div class="row">
           <div class="col-2">
-            <a class="navbar-brand" href="#">
-              <img src="images/amazonLogo.jpg" alt="Logo" style="width: 80px" />
+            <a class="navbar-brand myLogo" href="https://www.amazon.com/ref=nav_logo">
+              <img src="images/amazonLogo.jpg" alt="Logo" style="width: 120px" />
             </a>
           </div>
         </div>
-        <div class="card text-white" style="width: 20rem;">
-
-        <input class="card-header " type="button" id ="location" placeholder="Choose Your location" style="background-color:black;" >
-
-        <!-- <ul class="list-group list-group-flush address" >
-
-            <li class="list-group-item">Delivery options and delivery speeds my vary for different locations <button
-
-                    class="address" type="submit"
-
-                    style="background-color:rgb(233, 199, 85); border-radius: 10%; border: 0; width: 18rem;">sign in
-
-                    to see your address</button></li>
-
-            <li class="list-group-item"> _______or enter a US zip __________ <Code></Code>
-
-            <li class="list-group-item"><input type="text" value="" style="border-radius: 10%;"><button type="submit" style="border-radius: 10%;margin-left: 10px; background-color: #00ff00ef;">Apply</button>
-
-            </li>
-
-        </ul>  -->
-
-    </div>
-        <div class="col input-group justify-content-start">
-          <div class="form-group search">
-            <button
-              type="input-group-button"
-              class="btn btn-light dropdown-toggle"
-              data-bs-toggle="dropdown"
-            >
-              All
-            </button>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item btn-sm" href="#">All Departments</a>
-              </li>
-              <li><a class="dropdown-item btn-sm" href="#">Clothes</a></li>
-              <li><a class="dropdown-item" href="#">Electronics</a></li>
-              <li><a class="dropdown-item" href="#">Books</a></li>
-              <li><a class="dropdown-item" href="#">Toys</a></li>
-              <li><a class="dropdown-item" href="#">Appliances</a></li>
-            </ul>
-            <input type="input-group-button" class="btn btn-block bg-light">
-            <button type="button-group-button" class="btn bg-warning" style="margin-left: -20px;" href="#">🔍</button>
-            
-          </div>
+    <div>
+        <div class="card text-white" style="width: 10rem;">
+        <button onclick="handleAddressClick()" style="background-color: black;color: white;">Deliver to <br><img src="images/locsymb.png" width="20px" > Fairfield 52557</button>
         </div>
+    
+    <div class="card" id="iddd" style="width: 22rem;">        
+      <div class="card-header" style="background-color: rgb(202, 202, 230);">Choose Your location        
+      </div>        
+      <ul class="list-group list-group-flush">            
+        <li class="list-group-item">Delivery options and delivery speeds my vary for different locations 
+          <button class="address" type="submit"                    style="background-color:rgb(233, 199, 85); border-radius: 10%; border: 0; width: 18rem;">sign in to see your address</button>
+        </li>            
+        <li class="list-group-item"> _______or enter a US zip ___<Code></Code>            <li class="list-group-item">
+          <input type="text" value="" style="border-radius: 10%;">
+          <button type="submit" style="border-radius: 10%;margin-left: 10px; background-color: #00ff00ef;">Apply</button>
+          <button onClick="handleDone()">Done</button>
+    </li> 
+  </ul>
+</div>
+</div>
+        <div class=" input-group search" style="background-color: whitesmoke;; ">
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">All</button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item btn-sm" href="#">All Departments</a><hr>
+                </li>
+                <li><a class="dropdown-item btn-sm" href="#">Clothes</a></li>
+                <li><a class="dropdown-item" href="#">Electronics</a></li>
+                <li><a class="dropdown-item" href="#">Books</a></li>
+                <li><a class="dropdown-item" href="#">Toys</a></li>
+                <li><a class="dropdown-item" href="#">Appliances</a></li>
+              </ul>
+          <input type="text" class="form-control" aria-label="Text input with 2 dropdown buttons">
+          <button class="btn btn-outline-secondary" type="button" data-bs-toggle="search"
+              aria-expanded="false" style="background-color:rgb(230, 179, 87);">🔍</button>    
+      </div>
         <div>
-          <div class="col">
-            <button
-              type="radio"
-              class="btn bg-light dropdown-toggle"
-              data-bs-toggle="dropdown"
-            >
-              🇺🇸
-            </button>
-            <ul class="dropdown-menu float-right">
-              <li>
-                <a class="dropdown-item btn-sm" href="#"
-                  ><input name="radio" type="radio" /> English</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item btn-sm" href="#"
-                  ><input name="radio" type="radio" /> Espanol</a
-                >
-              </li>
-              <li><a class="dropdown-item" href="#">Learn more</a></li>
-              <li>
-                <a class="dropdown-item" href="#">Change Region/Country</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false" style="border: 0;"><img src="images/USflag.png" alt="Amazo"
+                  style="max-width: 40px;"></button>
+          <ul class="dropdown-menu dropdown-menu-end language">
+            <li>
+              <a class="dropdown-item btn-sm" href="#"
+                ><input name="radio" type="radio" /> English</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item btn-sm" href="#"
+                ><input name="radio" type="radio" /> Espanol</a
+              >
+            </li>
+            <li><a class="dropdown-item" href="#">Learn more</a></li>
+            <li>
+              <a class="dropdown-item" href="#">Change Region/Country</a>
+            </li>
+          </ul>
+      </div>
         <div>
           <div class="col mx-3">
             <button
@@ -206,13 +217,13 @@
               class="btn bg-light bg-dark text-white dropdown-toggle mySign"
               data-bs-toggle="dropdown"
             >
-              🇺Hello, Sign in Account & Lists
+              🇺Hello, Sign in <br>Account & Lists
             </button>
-        <div class="containerSign" ></div>
-            <ul class="dropdown-menu dropdown">
+                <div class="containerSign" ></div>
+            <ul class="dropdown-menu dropdown-menu-end">
                 <div class="signInUp">
               <li>
-                <a class="dropdown-item btn-sm" href="/wap_project/login.html"
+                <a class="dropdown-item btn-sm " href="/wap_project/login.html"
                 ><button class="bg-warning" type="button">Sign in</button></a>
               </li>
               <label>New Customer</label>
@@ -270,12 +281,18 @@
                     >
                   </li>
                 </div>
-              </div>
-            </ul>
           </div>
+            </ul>
         </div>
-      </div>
+          <div>
+            <button class="cart" style="margin-left: 100px;"><img src="images/cart.jpg"
+                    style="max-width: 70px; "></button>
+        </div>
     </nav>
+  </div>
+  
+  <div id="choose">
+
   </div>
   <div class="itemCon">
     <div class="containerPro mt-3">
@@ -466,7 +483,20 @@
   </div>
   </div>
     <script>
+      var modal=document.getElementById("iddd");
 
+      function handleAddressClick(){ 
+        modal.style.display="block";
+      }
+      
+
+      function handle(){
+        
+      }
+      function handleDone(){
+        modal.style.display="none";
+        
+      }
     </script>
   </body>
 </html>

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="../styles/myStyle.css">
+    <link rel="stylesheet" href="myStyle.css">
 </head>
 
 <body>
@@ -52,7 +52,7 @@
       <th>Product Name</th>
       <th>Category</th>
       <th>Quantity</th>
-      <th>price</th>
+      <th>Price</th>
       <th>Brand</th>
       <th>Id</th>
       <th>Rating</th> 
@@ -83,57 +83,57 @@
     var array = [];
     var index = 0;
     var idsOfInputs = ["itemName", "category", "quantity", "price", "brand", "Id", "ratings", "description"];
-    function add(){
-        index++;
-      var item = {
-        // id: index, 
-        name: document.getElementById("itemName").value,
-        category: document.getElementById("category").value,
-        quantity: document.getElementById("quantity").value,
-        price: document.getElementById("price").value,
-        brand: document.getElementById("brand").value,
-        id: document.getElementById("Id").value,
-        rate: document.getElementById("ratings").value,
-        description: document.getElementById("description").value,
-      };
-      array.push(item);
+    // function add(){
+    //     index++;
+    //   var item = {
+    //     // id: index, 
+    //     name: document.getElementById("itemName").value,
+    //     category: document.getElementById("category").value,
+    //     quantity: document.getElementById("quantity").value,
+    //     price: document.getElementById("price").value,
+    //     brand: document.getElementById("brand").value,
+    //     id: document.getElementById("Id").value,
+    //     rate: document.getElementById("ratings").value,
+    //     description: document.getElementById("description").value,
+    //   };
+    //   array.push(item);
 
 
-      let items = document.getElementById("items");
-      let tr = document.createElement("tr");
-      items.append(tr);
-      let nameTd = document.createElement("td");
-      nameTd.innerHTML = document.getElementById("itemName").value;
-      tr.append(nameTd);
+    //   let items = document.getElementById("items");
+    //   let tr = document.createElement("tr");
+    //   items.append(tr);
+    //   let nameTd = document.createElement("td");
+    //   nameTd.innerHTML = document.getElementById("itemName").value;
+    //   tr.append(nameTd);
 
-      let categoryTd = document.createElement("td");
-      categoryTd.innerHTML = document.getElementById("category").value;
-      tr.append(categoryTd);
+    //   let categoryTd = document.createElement("td");
+    //   categoryTd.innerHTML = document.getElementById("category").value;
+    //   tr.append(categoryTd);
 
-      let quantityTd = document.createElement("td");
-      quantityTd.innerHTML = document.getElementById("quantity").value;
-      tr.append(quantityTd);
+    //   let quantityTd = document.createElement("td");
+    //   quantityTd.innerHTML = document.getElementById("quantity").value;
+    //   tr.append(quantityTd);
 
-      let priceTd = document.createElement("td");
-      priceTd.innerHTML = document.getElementById("price").value;
-      tr.append(priceTd);
+    //   let priceTd = document.createElement("td");
+    //   priceTd.innerHTML = document.getElementById("price").value;
+    //   tr.append(priceTd);
 
-      let brandTd = document.createElement("td");
-      brandTd.innerHTML = document.getElementById("brand").value;
-      tr.append(brandTd);
+    //   let brandTd = document.createElement("td");
+    //   brandTd.innerHTML = document.getElementById("brand").value;
+    //   tr.append(brandTd);
 
-      let idTd = document.createElement("td");
-      idTd.innerHTML = document.getElementById("Id").value;
-      tr.append(idTd);
+    //   let idTd = document.createElement("td");
+    //   idTd.innerHTML = document.getElementById("Id").value;
+    //   tr.append(idTd);
 
-      let rateTd = document.createElement("td");
-      rateTd.innerHTML = document.getElementById("ratings").value;
-      tr.append(rateTd);
+    //   let rateTd = document.createElement("td");
+    //   rateTd.innerHTML = document.getElementById("ratings").value;
+    //   tr.append(rateTd);
 
-      let descTd = document.createElement("td");
-      descTd.innerHTML = document.getElementById("description").value;
-      tr.append(descTd);
-    }
+    //   let descTd = document.createElement("td");
+    //   descTd.innerHTML = document.getElementById("description").value;
+    //   tr.append(descTd);
+    // }
     function createEditButton(){
       let editTd = document.createElement("td");
       let button = document.createElement("button");
@@ -216,15 +216,28 @@
       }
     }
 
+    // function filter() {
+    //   document.getElementById("mode").value = "";
+    //   console.log(array);
+    //   let filteredArray = array.filter((item) => Number(item.quantity) > 100);
+    //   let children = document.getElementById('items').childNodes;
+    //   for (let i = 2; i < children.length; i++) {
+    //     let eachTr = children[i];
+    //     console.log(eachTr.children[2]);
+    //     if (Number(eachTr.children[2].innerHTML) < 100) {
+    //       eachTr.style.display = "none";
+    //     }
+    //   }
+    // }
     function filter() {
       document.getElementById("mode").value = "";
       console.log(array);
-      let filteredArray = array.filter((item) => Number(item.quantity) > 100);
+      let filteredArray = array.filter((item) => Number(item.price) > 100);
       let children = document.getElementById('items').childNodes;
       for (let i = 2; i < children.length; i++) {
         let eachTr = children[i];
-        console.log(eachTr.children[2]);
-        if (Number(eachTr.children[2].innerHTML) < 100) {
+        console.log(eachTr.children[3]);
+        if (Number(eachTr.children[3].innerHTML) < 100) {
           eachTr.style.display = "none";
         }
       }
