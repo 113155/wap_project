@@ -49,7 +49,7 @@
 
 <body>
     <div id="header"></div>
-    <h5>Review your information and log in</h5>
+    <h5>Review your information and Log in below</h5>
     <div class="myFlex">
         <label>Name</label>
         <label>Email</label>
@@ -69,11 +69,8 @@
             $('#footer').load("footer.html");
         });
         const queryString = window.location.search;
-        console.log(queryString);
         const urlParams = new URLSearchParams(queryString);
-        const names = urlParams.get("name");
-        console.log(names);
-
+        
         label1 = document.getElementsByTagName("label")[0];
         label1.innerHTML= label1.innerHTML + ": " + urlParams.get('name');
 

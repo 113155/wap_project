@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,18 +11,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <style>
-    
         .header {
             display: flex;
             align-items: flex-start;
             background-color: #090522e1;
             height: 70px;
         }
-        .formContainer{
-            width:400px;
+
+        .formContainer {
+            width: 400px;
             margin: auto;
         }
 
@@ -34,19 +35,33 @@
             border-radius: 5px;
             padding: 20px;
         }
-        .footer{
+
+        .footer {
             background-color: black;
             color: white;
-            font-size:small;
+            font-size: small;
             text-align: center;
-            vertical-align:auto;
+            vertical-align: auto;
             padding: 15px;
         }
-        .footer > a{
+
+        .footer>a {
             color: white;
         }
     </style>
     <script>
+        let customers = [];
+        let newCustomer = {};
+        function saveInfo(){
+            let name = document.getElementById("name");
+            let email = document.getElementById("email");
+            let password = document.getElementById("createPassword");
+            newCustomer.name = name.value;
+            newCustomer.email = email.value;
+            newCustomer.password = password.value;
+            customers.push("newCustomer");
+        }
+
         function showPassword() {
             var createPassword = document.getElementById("createPassword");
             if (createPassword.type === "password") {
@@ -55,10 +70,13 @@
                 createPassword.type = "password";
             }
         }
-        $(function(){
-       $('#header').load("header.html");
-       $('#footer').load("footer.html");
-   });
+        $(function () {
+            $('#header').load("header.html");
+            $('#footer').load("footer.html");
+        });
+        function login() {
+            window.location.href = "login.html";
+        }
     </script>
 </head>
 
@@ -70,41 +88,45 @@
         <div id="header"></div>
         <div class="formContainer">
             <h2>Welcome</h2>
-            <form action="previewPage.html">
+            <form action="previewPage.html" method="get">
                 <div class="form-check mb-3">
-                    <input class="form-check-input" type="radio" name="sign" id="sign_in">
+                    <!-- <input class="form-check-input" type="radio" name="sign" id="sign_in"> -->
                     <label class="form-check-label" for="sign_in">
                         <b>Create account.</b> &nbsp; <span style="font-size: smaller;"><b>New to Amazon?</b></span>
                     </label>
                 </div>
                 <div class="my-3">
-                    <input class="form-control form-control-lg" type="text" id="name" placeholder="Name" required>
+                    <input class="form-control form-control-lg" type="text" id="name" name="name" placeholder="Name"
+                        required>
                 </div>
                 <div class="mb-3">
-                    <input class="form-control form-control-lg" type="text" id="email" placeholder="Email" required>
+                    <input class="form-control form-control-lg" type="text" id="email" name="email" placeholder="Email"
+                        required>
                 </div>
                 <div class="mb-3">
-                    <input class="form-control form-control-lg" type="password" id="createPassword"
-                        placeholder="Create a password" required>
+                    <input class="form-control form-control-lg" type="password" id="createPassword" name="password"
+                        placeholder="Create a password" pattern="(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,14}"
+                        required />
                 </div>
                 <div class="form-check mb-3">
-                    <input class="form-check-input" type="checkbox" value="" id="showPassword" 
-                    onclick="showPassword()">
+                    <input class="form-check-input" type="checkbox" value="" id="showPassword" onclick="showPassword()">
                     <label class="form-check-label" for="showPassword">
                         Show password
                     </label>
                 </div>
                 <div class="d-grid gap-2 mb-3">
-                    <button class="btn btn-warning btn-lg" type="submit">Create account</button>
+                    <button class="btn btn-warning btn-lg" type="submit" onclick="saveInfo()">Create account</button>
                 </div>
-                <p>By creating an account you agree to Amazon's <a href="https://www.amazon.com/gp/aw/help/ref=ap_mobile_register_notification_condition_of_use?id=508088"
-                     style="color:dodgerblue">Conditions of Use</a>
-                    and <a href="https://www.amazon.com/gp/aw/help/ref=ap_mobile_signin_notification_privacy_notice?id=468496"
-                     style="color: dodgerblue;">Privacy Notice</a>.
+                <p>By creating an account you agree to Amazon's <a
+                        href="https://www.amazon.com/gp/aw/help/ref=ap_mobile_register_notification_condition_of_use?id=508088"
+                        style="color:dodgerblue">Conditions of Use</a>
+                    and <a
+                        href="https://www.amazon.com/gp/aw/help/ref=ap_mobile_signin_notification_privacy_notice?id=468496"
+                        style="color: dodgerblue;">Privacy Notice</a>.
                 </p>
 
                 <div class="form-check mb-3">
-                    <input class="form-check-input" type="radio" name="sign" id="sign_in">
+                    <input class="form-check-input" type="radio" name="sign" id="sign_in" onclick="login()">
                     <label class="form-check-label" for="sign_in">
                         <b>Sign-In.</b> &nbsp; <span style="font-size: smaller;"> Already a customer?</span>
                     </label>
