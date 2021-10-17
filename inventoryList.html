@@ -3,9 +3,26 @@
 
 <head>
     <link rel="stylesheet" href="myStyle.css">
+    
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#header2").load("header2.html");
+
+        $("#footer").load("footer.html");
+      });
+    </script>
 </head>
 
 <body>
+  <div class="position-sticky top-0" style="z-index: 4;" id="header2">      
+  </div>
+
+  <div class="inventory">
   <h1>Inventory</h1>
   <div>
     <p>
@@ -61,86 +78,18 @@
       <th>Delete</th>
     </tr>
   </table>
-
-  <div>
-    <h4>Project Tasks</h4>
-    <i> Inventory Page Assignment.</i>
-     <ul>
-       <li>
-        <b>Item properties</b>
-        Ratings,
-        Brand,
-        Price,
-        Department/Category,
-        name,
-        Description,
-        id
-       </li>       
-     </ul>
-  </div>
-
-  <script>
+</div>
+ <script>
     var array = [];
     var index = 0;
     var idsOfInputs = ["itemName", "category", "quantity", "price", "brand", "Id", "ratings", "description"];
-    // function add(){
-    //     index++;
-    //   var item = {
-    //     // id: index, 
-    //     name: document.getElementById("itemName").value,
-    //     category: document.getElementById("category").value,
-    //     quantity: document.getElementById("quantity").value,
-    //     price: document.getElementById("price").value,
-    //     brand: document.getElementById("brand").value,
-    //     id: document.getElementById("Id").value,
-    //     rate: document.getElementById("ratings").value,
-    //     description: document.getElementById("description").value,
-    //   };
-    //   array.push(item);
-
-
-    //   let items = document.getElementById("items");
-    //   let tr = document.createElement("tr");
-    //   items.append(tr);
-    //   let nameTd = document.createElement("td");
-    //   nameTd.innerHTML = document.getElementById("itemName").value;
-    //   tr.append(nameTd);
-
-    //   let categoryTd = document.createElement("td");
-    //   categoryTd.innerHTML = document.getElementById("category").value;
-    //   tr.append(categoryTd);
-
-    //   let quantityTd = document.createElement("td");
-    //   quantityTd.innerHTML = document.getElementById("quantity").value;
-    //   tr.append(quantityTd);
-
-    //   let priceTd = document.createElement("td");
-    //   priceTd.innerHTML = document.getElementById("price").value;
-    //   tr.append(priceTd);
-
-    //   let brandTd = document.createElement("td");
-    //   brandTd.innerHTML = document.getElementById("brand").value;
-    //   tr.append(brandTd);
-
-    //   let idTd = document.createElement("td");
-    //   idTd.innerHTML = document.getElementById("Id").value;
-    //   tr.append(idTd);
-
-    //   let rateTd = document.createElement("td");
-    //   rateTd.innerHTML = document.getElementById("ratings").value;
-    //   tr.append(rateTd);
-
-    //   let descTd = document.createElement("td");
-    //   descTd.innerHTML = document.getElementById("description").value;
-    //   tr.append(descTd);
-    // }
+    
     function createEditButton(){
       let editTd = document.createElement("td");
       let button = document.createElement("button");
       button.innerHTML = "Edit";
       button.setAttribute("myId", index);
       button.onclick = function () {
-        //this -> button, this.parentNode->td,this.parentNode.parentNode->tr 
         let childNodes = this.parentNode.parentNode.childNodes;
         this.parentNode.parentNode.setAttribute("editing","true");
         for (let i = 0;i<=2;i++) {
@@ -215,20 +164,6 @@
         tr.append(createDeleteButton());
       }
     }
-
-    // function filter() {
-    //   document.getElementById("mode").value = "";
-    //   console.log(array);
-    //   let filteredArray = array.filter((item) => Number(item.quantity) > 100);
-    //   let children = document.getElementById('items').childNodes;
-    //   for (let i = 2; i < children.length; i++) {
-    //     let eachTr = children[i];
-    //     console.log(eachTr.children[2]);
-    //     if (Number(eachTr.children[2].innerHTML) < 100) {
-    //       eachTr.style.display = "none";
-    //     }
-    //   }
-    // }
     function filter() {
       document.getElementById("mode").value = "";
       console.log(array);
@@ -267,6 +202,7 @@
 
     }
   </script>
+  <div id="footer" style="margin-top: 20px;"></div>
 </body>
 
 </html>
