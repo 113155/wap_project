@@ -1,33 +1,550 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Webpage Project</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .parentCon{
+        display: grid;
+        grid-template-columns: 1fr;
+        z-index: 5;
+      }
+      
+      .containerPro {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        padding: 10px;
+        grid-gap:10px;
+      }
+      .dropdown-item:hover {
+        background-color: lightskyblue;
+      }
+      .mySign:hover {
+        border-color: white;
+        text-size-adjust: 10px;
+      }
+      .myLogo:hover {
+        border-color: white;
+      }
+      .laptop {
+        grid-column: 1/3;
+        grid-row: 1/3;
+        background-color:wheat;
+      }
+      .pet {
+        grid-column: 3/5;
+        grid-row: 1/3;
+        background-color:powderblue;
+      }
+      .toy {
+        grid-column: 5/7;
+        grid-row: 1/3;
+        background-color: sandybrown;
+      }
+      .jacket {
+        grid-column: 1/3;
+        grid-row: 3/5;
+        height: 600px;
+        background-color:slategray ;
+      }
+      .shoes {
+        grid-column: 3/5;
+        grid-row: 3/4;
+        height: 330px;
+        background-color:thistle ;
+      }
+      .flashDrive {
+        grid-column: 3/5;
+        grid-row: 4/5;
+        height: 275px;
+        background-color:palegoldenrod;
+      }
+      .fridge {
+        grid-column: 5/7;
+        grid-row: 3/5;
+        background-color: olivedrab;
+      }
+      .iPhone13Case {
+        grid-column: 1/3;
+        grid-row: 5/7;
+        background-color: mediumaquamarine;
+      }
+      .book {
+        grid-column: 3/5;
+        grid-row: 5/7;
+        background-color: lightslategray;
+      }
+      .mug {
+        grid-column: 5/7;
+        grid-row: 5/7;
+        background-color: khaki;
+      }
+      .containerSign{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          background-color: aliceblue;
+          float: right !important;
+          padding: 10px;
+          margin-right: 20px;
+      }
+      .signInUp{
+        grid-column: 1/3;
+        grid-row: 1/3;
+      }
+      .firstCol{
+        grid-column: 1/2;
+        grid-row: 3/8;
+      }
+      .secondCol{
+        grid-column: 2/3;
+        grid-row: 3/10;
+      }
+      #location:hover{
+        border: 1px solid black !important;
+      }
+      #iddd{
+        display: none;
+        position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 40%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+   /* Fallback color */
+  background-color: white; /* Black w/ opacity */
+  margin-left: 50px;
+  margin-top: 80px;
 
-    <a href ="selectedProduct.html"><img src="../images/header.png" style="width:75%"/></a>
-
+      }
+      .pos{
+        display: grid;
+            grid-template-columns: 1fr 2fr 5fr 1fr 1fr 2fr;
+            background-color: black;
+            text-decoration: white;
+            border-top: 5px solid white;
+            border-right: 10px solid white;
+            border-left: 10px solid white;
+            border-bottom: 1px solid white;
+            max-width: 2300;
+            height: 90px;
+            align-items: center;
+      }
+      .language{
+        padding-left: 20px;
+        margin-right: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentCon">
+    <div class="navCon">
+    <nav class="navbar navbar-expand-sm bg-dark text-white pb-3 pos ">
+        <div class="row">
+          <div class="col-2">
+            <a class="navbar-brand myLogo" href="https://www.amazon.com/ref=nav_logo">
+              <img src="images/amazonLogo.jpg" alt="Logo" style="width: 120px" />
+            </a>
+          </div>
+        </div>
     <div>
-       <h4>Project Tasks</h4>
-         <a href="https://github.com/sridevi-malasani-miu/sridevi-malasani-miu.github.io/blob/main/cs315/w3d3BootstrapComponents/cards.html">Card Example in github</a>
-       <ul>
-           <li><b>Filters</b>
-            Department/Category -links,
-            Ratings- stars,
-            Brand - checkboxes,
-            Price - some default and range selection,
-            Clear All Filters- button.
-        </li>
-        <li><b>Sort</b>
-            Price High to Low,
-            Price Low to High,
-            Highest Ratings
+        <div class="card text-white" style="width: 10rem;">
+        <button onclick="handleAddressClick()" style="background-color: black;color: white;">Deliver to <br><img src="images/locsymb.png" width="20px" > Fairfield 52557</button>
+        </div>
+    
+    <div class="card" id="iddd" style="width: 22rem;">        
+      <div class="card-header" style="background-color: rgb(202, 202, 230);">Choose Your location        
+      </div>        
+      <ul class="list-group list-group-flush">            
+        <li class="list-group-item">Delivery options and delivery speeds my vary for different locations 
+          <button class="address" type="submit"                    style="background-color:rgb(233, 199, 85); border-radius: 10%; border: 0; width: 18rem;">sign in to see your address</button>
+        </li>            
+        <li class="list-group-item"> _______or enter a US zip ___<Code></Code>            <li class="list-group-item">
+          <input type="text" value="" style="border-radius: 10%;">
+          <button type="submit" style="border-radius: 10%;margin-left: 10px; background-color: #00ff00ef;">Apply</button>
+          <button onClick="handleDone()">Done</button>
+    </li> 
+  </ul>
+</div>
+</div>
+        <div class=" input-group search" style="background-color: whitesmoke;; ">
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">All</button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item btn-sm" href="#">All Departments</a><hr>
+                </li>
+                <li><a class="dropdown-item btn-sm" href="#">Clothes</a></li>
+                <li><a class="dropdown-item" href="#">Electronics</a></li>
+                <li><a class="dropdown-item" href="#">Books</a></li>
+                <li><a class="dropdown-item" href="#">Toys</a></li>
+                <li><a class="dropdown-item" href="#">Appliances</a></li>
+              </ul>
+          <input type="text" class="form-control" aria-label="Text input with 2 dropdown buttons">
+          <button class="btn btn-outline-secondary" type="button" data-bs-toggle="search"
+              aria-expanded="false" style="background-color:rgb(230, 179, 87);">🔍</button>    
+      </div>
+        <div>
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false" style="border: 0;"><img src="images/USflag.png" alt="Amazo"
+                  style="max-width: 40px;"></button>
+          <ul class="dropdown-menu dropdown-menu-end language">
+            <li>
+              <a class="dropdown-item btn-sm" href="#"
+                ><input name="radio" type="radio" /> English</a
+              >
             </li>
-       </ul>
-       
+            <li>
+              <a class="dropdown-item btn-sm" href="#"
+                ><input name="radio" type="radio" /> Espanol</a
+              >
+            </li>
+            <li><a class="dropdown-item" href="#">Learn more</a></li>
+            <li>
+              <a class="dropdown-item" href="#">Change Region/Country</a>
+            </li>
+          </ul>
+      </div>
+      <div>
+          <div class="col mx-3">
+            <button
+              type="button"
+              class="btn bg-light bg-dark text-white dropdown-toggle mySign"
+              data-bs-toggle="dropdown" onclick="handleSign()" id="signId"
+            >
+              🇺Hello, Sign in <br>Account & Lists
+            </button>
+        <div>
+          <!-- <ul class="dropdown-menu dropdown-menu-end containerSign">
+            <div class="signInUp text-center">
+              <li>
+                <a class="dropdown-item btn-sm " href="/wap_project/login.html"
+                ><button class="bg-warning" type="button">Sign in</button></a>
+              </li>  
+              <label>New Customer</label>
+              <li><a class="dropdown-item btn-sm" href="/wap_project/signup.html">Start here</a></li><br>
+              <hr>
+              </div>
+                <div class="firstCol">
+                  <li>
+                    <a class="dropdown-item btn-sm" href="#"
+                      ><b>Your Lists</b></a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">Create a List</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Find a List or Registry</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >AmazonSmile Charity Lists</a
+                    >
+                  </li>
+                </div>
+                <div class="secondCol" style="border-left: 1px solid black; padding-left: 5px;">
+                  <li>
+                    <a
+                      class="dropdown-item btn-sm"
+                      href="/wap_project/login.html"
+                      ><b>Your Acount</b></a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/wap_project/login.html"
+                      >Account</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/wap_project/login.html"
+                      >orders</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/wap_project/login.html"
+                      >Recommendations</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/wap_project/login.html"
+                      >orders</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/wap_project/login.html"
+                      >Browsing History</a
+                    >  
+                  </li>
+                  <button type="button" id="finish" onclick="quit()">done</button>  
+                </div>
+            </ul> -->
+          </div>
+        </div>
+    </div> 
+          <div>
+            <button class="cart" style="margin-left: 100px;"><img src="images/cart.jpg"
+                    style="max-width: 70px; "></button>
+        </div>
+    </nav>
+  </div>
+  
+  <div id="choose">
+
+  </div>
+  <div>
+      <button type="button" onclick="sortLowHigh()">Price: Low to High</button>
+     <button type="button" onclick="sortHighLow()">Price: High to Low</button>
+      <button type="button" onclick="sortHighRate()">Highest Ratings</button>
+    
+  </div>
+  <div id="show" width=""></div>
+  <div class="itemCon">
+    <div class="containerPro mt-3">
+      <div class="card laptop mb-3" style="width: 400px">
+        <img
+          class="card-img-top img-thumbnail"
+          src="/wap_project/images/appleMac.jpg"
+          alt="Card image"
+          style="width: 100%"
+        />
+        <div class="card-body">
+          <h4 class="card-title">Apple MacBook Air</h4>
+          <p class="card-text">
+            2020 Apple MacBook Air Laptop: Apple M1 Chip, 13” Retina Display,
+            8GB RAM, 256GB SSD Storage, Backlit Keyboard, FaceTime HD Camera,
+            Touch ID. Works with iPhone/iPad; Gold
+          </p>
+          <a href="https://www.amazon.com/Apple-MacBook-13-inch-256GB-Storage/dp/B08N5M7S6K/ref=sxin_12_pa_sp_search_thematic_sspa?cv_ct_cx=laptop&dchild=1&keywords=laptop&pd_rd_i=B08N5M7S6K&pd_rd_r=4fc6e936-b422-46cd-9ed8-bcad0c697264&pd_rd_w=6Jc1n&pd_rd_wg=stoNf&pf_rd_p=f21da57e-06e4-46a5-9148-e2dea2e78384&pf_rd_r=YVH6EW0Z7M6HX2RYZ8NV&qid=1634274769&sr=1-1-a73d1c8c-2fd2-4f19-aa41-2df022bcb241-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExRUY2V1o2UTRUVVVMJmVuY3J5cHRlZElkPUEwNjAzNTMzR0tLMjBBMjZUV1k2JmVuY3J5cHRlZEFkSWQ9QTA5MTUyNjYyOVhHVFY1WjBNWDFDJndpZGdldE5hbWU9c3Bfc2VhcmNoX3RoZW1hdGljJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ&th=1"
+            >more</a>
+        </div>
+      </div>
+      <div class="card pet mb-3" style="width: 400px">
+        <img
+          class="card-img-top img-thumbnail"
+          src="/wap_project/images/pet.jpg"
+          alt="Card image"
+          style="width: 100%"
+        />
+        <div class="card-body">
+          <h4 class="card-title">Dog Rope Ties</h4>
+          <p class="card-text">
+            Youngever 3.5 Feet Dog Rope Toys for Aggressive Chewers, Tough Rope
+            Chew Toys for XL, Large and
+          </p>
+          <a
+            href="https://www.amazon.com/s?rh=n%3A18366417011&brr=1&pd_rd_r=da5c847d-d1a0-4c17-bfaa-32a4e1cb7b85&pd_rd_w=QoE2h&pd_rd_wg=79Zou&rd=1&ref=pd_gw_unk"
+            >more</a
+          >
+        </div>
+      </div>
+      <div class="card toy mb-3" style="width: 400px">
+        <img
+          class="card-img-top img-thumbnail"
+          src="/wap_project/images/toys.jpg"
+          alt="Card image"
+          style="width: 100%"
+        />
+        <div class="card-body">
+          <h4 class="card-title">Toys</h4>
+          <p class="card-text">
+            Melissa & Doug Deluxe Jumbo Cardboard Blocks, 40Piece (E-Commerce
+            Packaging)
+          </p>
+          <a
+            href="https://www.amazon.com/events/epicdeals?ref_=EDD21_P1_GW_Desk_DashQuad_v2_TOYS&deals-widget=%257B%2522presetId%2522:%2522deals-collection-TOYS%2522%257D&pf_rd_r=60TZ5ETNW2E2XB3YEX5F&pf_rd_p=6149f778-d19f-497a-af68-2852584456dd&pd_rd_r=da5c847d-d1a0-4c17-bfaa-32a4e1cb7b85&pd_rd_w=NLOA6&pd_rd_wg=79Zou"
+            >more</a
+          >
+        </div>
+      </div>
+      <div class="card jacket mb-3" style="width: 400px">
+        <img
+          class="card-img-top img-thumbnail"
+          src="/wap_project/images/jacket.jpg"
+          alt="Card image"
+          style="width: 100%"
+        />
+        <div class="card-body">
+          <h4 class="card-title">Jacket</h4>
+          <p class="card-text">
+            Legendary Whitetails Men's Journeyman Shirt Jacket
+          </p>
+          <a
+            href="https://www.amazon.com/Legendary-Whitetails-Journeyman-Tobacco-XX-Large/dp/B00EUHCMRS/ref=sr_1_44?dchild=1&keywords=jackets&qid=1634269115&sr=8-44"
+            >more</a
+          >
+        </div>
+      </div>
+
+      <div class="card shoes mb-3" style="width: 400px">
+        <img
+          class="card-img-top img-thumbnail"
+          src="/wap_project/images/shoes.jpg"
+          alt="Card image"
+          style="width: 100%"
+        />
+        <div class="card-body">
+          <h4 class="card-title">Shoes</h4>
+          <p class="card-text">TOMS Darcy Women's</p>
+          <a
+            href="https://www.amazon.com/TOMS-Womens-Darcy-Loafer-Black/dp/B08QV14JMS/ref=sr_1_2?dchild=1&pd_rd_r=da5c847d-d1a0-4c17-bfaa-32a4e1cb7b85&pd_rd_w=4jUcG&pd_rd_wg=79Zou&pf_rd_p=4fae49d9-b8f9-4c20-a9e1-82d7b37a6a8d&pf_rd_r=60TZ5ETNW2E2XB3YEX5F&qid=1634270395&s=apparel&sr=1-2"
+            >more</a
+          >
+        </div>
+      </div>
+      <div class="card fridge mb-3" style="width: 400px">
+        <img
+          class="card-img-top img-thumbnail"
+          src="/wap_project/images/fridge.jpg"
+          alt="Card image"
+          style="width: 100%"
+        />
+        <div class="card-body">
+          <h4 class="card-title">Fridge</h4>
+          <p class="card-text">
+            Rainfally Portable Refrigerator, 3.2 cu ft. Unit 2-Door Mini Freezer
+            Cooler Fridge w/Reversible Door, Removable Glass Shelves, Mechanical
+            Control, Upright Freezer for Dorm, Home & Office (Black)
+          </p>
+          <a
+            href="https://www.amazon.com/Rainfally-Refrigerator-Reversible-Removable-Mechanical/dp/B099JVC499/ref=sr_1_21_sspa?dchild=1&keywords=fridge&qid=1634270933&s=apparel&sr=1-21-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFCM1ZNWVJYMjdTUSZlbmNyeXB0ZWRJZD1BMDIzODc3NDNFNlJJT0swSDRRTE8mZW5jcnlwdGVkQWRJZD1BMDc1NDMxMlc4RVNOT1c4VUhZMSZ3aWRnZXROYW1lPXNwX2J0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU&th=1"
+            >more</a
+          >
+        </div>
+      </div>
+      <div class="card flashDrive mb-3" style="width: 400px">
+        <img
+          class="card-img-top img-thumbnail"
+          src="/wap_project/images/flashDrive.jpg"
+          alt="Card image"
+          style="width: 100%"
+        />
+        <div class="card-body">
+          <h4 class="card-title">Flash Drive</h4>
+          <p class="card-text">
+            SanDisk 128GB Ultra Flair USB 3.0 Flash Drive - SDCZ73-128G-G46
+          </p>
+          <a
+            href="https://www.amazon.com/SanDisk-Ultra-Flair-128GB-Flash/dp/B015CH1PJU/ref=sr_1_9?dchild=1&keywords=flash%2Bdrive&qid=1634273490&sr=8-9&th=1"
+            >more</a
+          >
+        </div>
+      </div>
+      <div class="card book mb-3" style="width: 400px">
+        <img
+          class="card-img-top img-thumbnail"
+          src="/wap_project/images/DownParisLondon.jpg"
+          alt="Card image"
+          style="width: 100%"
+        />
+        <div class="card-body">
+          <h4 class="card-title">Down and Out in Paris and London</h4>
+          <p class="card-text">
+            Down and Out in Paris and London by George Orwell
+          </p>
+          <a
+            href="https://www.amazon.com/Down-Paris-London-George-Orwell/dp/015626224X/ref=sr_1_7?crid=1BJ80R7H6F5QW&dchild=1&keywords=down+and+out+in+paris+and+london+hardcover&qid=1634272239&sr=8-7"
+            >more</a
+          >
+        </div>
+      </div>
+      <div class="card iPhone13Case mb-3" style="width: 400px">
+        <img
+          class="card-img-top img-thumbnail"
+          src="/wap_project/images/iPhone13Case.jpg"
+          alt="Card image"
+          style="width: 100%"
+        />
+        <div class="card-body">
+          <h4 class="card-title">iPhone13 Case</h4>
+          <p class="card-text">
+            Qbool Qbool Liquid Silicone Case Compatible with iPhone 13 [6.1
+          </p>
+          <a
+            href="https://www.amazon.com/Qbool-Compatible-Protective-Anti-Scratch-Microfiber/dp/B09F6MR4Q3/ref=sr_1_3_sspa?dchild=1&keywords=iphone%2B13%2Bblue&qid=1634271826&s=apparel&sr=1-3-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExMTRNUFAzTTVJWlRHJmVuY3J5cHRlZElkPUEwOTYzMDEyMURPTDJKQk9KQTRaWCZlbmNyeXB0ZWRBZElkPUEwODQ3ODk1MktEM1Q1MVRPTjBHUyZ3aWRnZXROYW1lPXNwX210ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU&th=1"
+            >more</a
+          >
+        </div>
+      </div>
+      <div class="card mug mb-3" style="width: 400px">
+        <img
+          class="card-img-top img-thumbnail"
+          src="/wap_project/images/mug.jpg"
+          alt="Card image"
+          style="width: 100%"
+        />
+        <div class="card-body">
+          <h4 class="card-title">Coffee Mug</h4>
+          <p class="card-text">
+            Boelter Brands NFL Sculpted Relief Mug, 14-Ounce
+          </p>
+          <a
+            href="https://www.amazon.com/England-Patriots-Sculpted-Relief-14-ounce/dp/B00D2MJ8OC/ref=pd_bxgy_img_1/142-0507383-9194701?pd_rd_w=LZule&pf_rd_p=c64372fa-c41c-422e-990d-9e034f73989b&pf_rd_r=VQRD68CM75E287W9V1ZM&pd_rd_r=c6d2920a-060e-49dc-8fa1-462314ce00f6&pd_rd_wg=7xiIe&pd_rd_i=B00D2MJ8OC&th=1"
+            >more</a
+          >
+        </div>
+      </div>
     </div>
-</body>
+  </div>
+  </div>
+    <script>
+      var array=[{name: "Apple MacBook Air", category:	"Electronics", quantity:	10, price:	929,brand:"Apple	MB13", id:"MB13",ratings:	5},
+      {name: "Dog RopeTies", category:	"Dog", quantity:	5, price:	12,brand:"QiLongHao",id:"Q12",ratings:	4},
+      {name: "Toys", category:	"Kids", quantity:	10, price:	32,brand:"Melisa Dong",id:"MD21",ratings:	5},
+      {name: "Jacket", category:	"Men", quantity:	20, price:	79,brand:"Whitetails",id:"WT15",ratings:	4.5},
+      {name: "Shoes", category:	"women", quantity:	30, price:	29,brand:"TOMS",id:"TS36",ratings:	4},
+      {name: "Flash Drive", category:	"Electronics", quantity:	80, price:	16,brand:"SanDisk",id:"SDCZ73",ratings:	4.5},
+      {name: "Fridge", category:	"Appliances", quantity:	6, price:	260,brand:"Generic",id:"GF112",ratings:	5},
+      {name: "iPhone13 Case", category:	"Electronics", quantity:	50, price:	14,brand:"Qbool",id:"Qb115",ratings:	3},
+      {name: "Down and Out in Paris and London", category:	"Book", quantity:	70, price:	14,brand:"Classic",id:"CB70s",ratings:	5},
+      {name: "Coffee Mug", category:	"Household", quantity:	10, price:	28,brand:"Boelter Brands",id:"BBNFL13",ratings:	4,}
+      ]
+      var modal=document.getElementById("iddd");
+
+      var modal2=document.getElementById("finish");
+      function handleAddressClick(){ 
+        modal.style.display="block";
+      }
+      
+
+      // function handle(){
+        
+      // }
+      function handleDone(){
+        modal.style.display="none";
+        
+      }
+      function handleSign(){
+        modal2.style.display="block";
+      }
+      function quit(){
+        modal2.style.display="none";  
+      }
+
+      function sortLowHigh(){
+      let sortedArray = array.map((item)=>item.price)
+      .sort((item1, item2) => Number(item1)-Number(item2));
+         alert(sortedArray);
+      }
+      
+      function sortHighLow(){
+      let sortedArray = array.map((item)=>item.price)
+      .sort((item1, item2) => Number(item2)-Number(item1));
+          console.log(sortedArray);
+      }
+      function sortHighRate(){
+        let sortedArray = array.map((item)=>item.ratings)
+      .sort((item1, item2) => Number(item2)-Number(item1));
+          alert(sortedArray);
+      }
+
+    </script>
+  </body>
 </html>

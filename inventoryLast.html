@@ -236,8 +236,8 @@
       let children = document.getElementById('items').childNodes;
       for (let i = 2; i < children.length; i++) {
         let eachTr = children[i];
-        console.log(eachTr.children[3]);
-        if (Number(eachTr.children[3].innerHTML) < 100) {
+        console.log(eachTr.children[2]);
+        if (Number(eachTr.children[2].innerHTML) < 100) {
           eachTr.style.display = "none";
         }
       }
