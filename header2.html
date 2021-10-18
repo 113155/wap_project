@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Assignment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .dropdown-item:hover {
+        background-color: lightskyblue;
+      }
+      .mySign:hover {
+        border-color: white;
+        text-size-adjust: 10px;
+      }
+        #iddd {
+            display: none;
+            position: fixed;           
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 40%;
+            overflow: auto;
+            background-color: white;
+            margin-left: 50px;
+            margin-top: 80px;
+
+        }
+
+        .pos {
+            display: grid;    
+            grid-template-columns: 9% 15% 40% 8% 9% 12%;            
+            background-color: black;
+            text-decoration: white;   
+            max-width: 2300;
+            height: 90px;
+            align-items: center;    
+        }
+
+        .language {
+            padding-left: 20px;
+            margin-right: 100px;
+        }
+    </style>
+</head>
+
+<body>        
+            <nav class="navbar navbar-expand-sm bg-dark text-white pb-3 pos ">
+                <div class="row">
+                    <div class="col-2">
+                        <a class="navbar-brand myLogo" href="https://www.amazon.com/ref=nav_logo">
+                            <img src="../images/amazonLogo.jpg" alt="Logo" style="width: 120px" />
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="card text-white" style="width: 10rem;">
+                        <button onclick="handleAddressClick()" style="background-color: black;color: white;">Deliver to
+                            <br><img src="../images/locsymb.png" width="20px"> Fairfield 52557</button>
+                    </div>
+
+                    <div class="card" id="iddd" style="width: 22rem;">       
+                        <div class="card-header" style="background-color: rgb(202, 202, 230);">Choose Your location     
+                             
+                        </div>       
+                        <ul class="list-group list-group-flush">           
+                            <li class="list-group-item">Delivery options and delivery speeds my vary for different
+                                locations
+                                <button class="address" type="submit"                    
+                                    style="background-color:rgb(233, 199, 85); border-radius: 10%; border: 0; width: 18rem;">sign
+                                    in to see your address</button>
+                            </li>           
+                            <li class="list-group-item"> _______or enter a US zip ___<Code></Code>           
+                            <li class="list-group-item">
+                                <input type="text" value="" style="border-radius: 10%;">
+                                <button type="submit"
+                                     style="border-radius: 10%;margin-left: 10px; background-color: #00ff00ef;">Apply</button>
+                                <button onClick="handleDone()">Done</button>
+                            </li> 
+                        </ul>
+                    </div>
+                </div>
+                <div class=" input-group search" style="background-color: whitesmoke;; ">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">All</button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item btn-sm" href="#">All Departments</a>
+                            <hr>
+                        </li>
+                        <li><a class="dropdown-item btn-sm" href="#">Clothes</a></li>
+                        <li><a class="dropdown-item" href="#">Electronics</a></li>
+                        <li><a class="dropdown-item" href="#">Books</a></li>
+                        <li><a class="dropdown-item" href="#">Toys</a></li>
+                        <li><a class="dropdown-item" href="#">Appliances</a></li>
+                    </ul>
+                    <input type="text" class="form-control" aria-label="Text input with 2 dropdown buttons">
+                    <button class="btn btn-outline-secondary" type="button" data-bs-toggle="search"
+                        aria-expanded="false" style="background-color:rgb(230, 179, 87);">🔍</button>
+                </div>
+                <div>
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" style="border: 0;"><img src="../images/USflag.png" alt="Amazo"
+                            style="max-width: 40px;"></button>
+                    <ul class="dropdown-menu dropdown-menu-end language">
+                        <li>
+                            <a class="dropdown-item btn-sm" href="#"><input name="radio" type="radio" /> English</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item btn-sm" href="#"><input name="radio" type="radio" /> Espanol</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Learn more</a></li>
+                        <li>
+                            <a class="dropdown-item" href="#">Change Region/Country</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="col mx-3">
+                    <div >
+                       <a href="login.html">
+                        <button type="button" class="btn bg-light bg-dark text-white  mySign ">                           
+                            Hello, Sign in
+                        </button>
+                       </a> 
+                    </div>
+                        
+                </div>
+                <div>
+                    <button class="cart" style="margin-left: 100px;"><img src="../images/cart.jpg"
+                            style="max-width: 70px; "></button>
+                </div>
+            </nav>
+</body>
+
+</html>
