@@ -18,37 +18,23 @@
       }
         #iddd {
             display: none;
-            position: fixed;
-            /* Stay in place */
-
-            /* Sit on top */
+            position: fixed;           
             left: 0;
             top: 0;
             width: 100%;
-            /* Full width */
             height: 40%;
-            /* Full height */
             overflow: auto;
-            /* Enable scroll if needed */
-            /* Fallback color */
             background-color: white;
-            /* Black w/ opacity */
             margin-left: 50px;
             margin-top: 80px;
 
         }
 
         .pos {
-            display: grid;
-            /* grid-template-columns: 1fr 2fr 5fr 1fr 1fr 2fr; */
-            grid-template-columns: 9% 15% 40% 8% 9% 12%;
-            /* grid-template-columns: 7% 14% 38% 7% 7% 14% ; */
+            display: grid;    
+            grid-template-columns: 9% 15% 40% 8% 9% 12%;            
             background-color: black;
-            text-decoration: white;
-            border-top: 5px solid white;
-            border-right: 10px solid white;
-            border-left: 10px solid white;
-            border-bottom: 1px solid white;
+            text-decoration: white;   
             max-width: 2300;
             height: 90px;
             align-items: center;    
@@ -61,21 +47,19 @@
     </style>
 </head>
 
-<body>
-    
-        
+<body>        
             <nav class="navbar navbar-expand-sm bg-dark text-white pb-3 pos ">
                 <div class="row">
                     <div class="col-2">
                         <a class="navbar-brand myLogo" href="https://www.amazon.com/ref=nav_logo">
-                            <img src="images/amazonLogo.jpg" alt="Logo" style="width: 120px" />
+                            <img src="../images/amazonLogo.jpg" alt="Logo" style="width: 120px" />
                         </a>
                     </div>
                 </div>
                 <div>
                     <div class="card text-white" style="width: 10rem;">
                         <button onclick="handleAddressClick()" style="background-color: black;color: white;">Deliver to
-                            <br><img src="images/locsymb.png" width="20px"> Fairfield 52557</button>
+                            <br><img src="../images/locsymb.png" width="20px"> Fairfield 52557</button>
                     </div>
 
                     <div class="card" id="iddd" style="width: 22rem;">       
@@ -119,7 +103,7 @@
                 </div>
                 <div>
                     <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false" style="border: 0;"><img src="images/USflag.png" alt="Amazo"
+                        aria-expanded="false" style="border: 0;"><img src="../images/USflag.png" alt="Amazo"
                             style="max-width: 40px;"></button>
                     <ul class="dropdown-menu dropdown-menu-end language">
                         <li>
@@ -134,64 +118,22 @@
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <div class="col mx-3">
-                        <button type="button" class="btn bg-light bg-dark text-white dropdown-toggle mySign"
-                            data-bs-toggle="dropdown">
-                            Hello, Sign in <br>Account & Lists
+                
+                <div class="col mx-3">
+                    <div >
+                       <a href="login.html">
+                        <button type="button" class="btn bg-light bg-dark text-white  mySign ">                           
+                            Hello, Sign in
                         </button>
-                        <div class="containerSign"></div>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <div class="signInUp">
-                                <li>
-                                    <a class="dropdown-item btn-sm " href="/wap_project/login.html"><button
-                                            class="bg-warning" type="button">Sign in</button></a>
-                                </li>
-                                <label>New Customer</label>
-                                <li><a class="dropdown-item btn-sm" href="/wap_project/signup.html">Start here</a></li>
-                            </div>
-                            <div>
-                                <li>
-                                    <a class="dropdown-item btn-sm leftList" href="#"><b>Your Lists</b></a>
-                                </li>
-                                <li><a class="dropdown-item" href="#">Create a List</a></li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Find a List or Registry</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">AmazonSmile Charity Lists</a>
-                                </li>
-                            </div>
-                            <div>
-                                <li>
-                                    <a class="dropdown-item btn-sm rightList" href="/wap_project/login.html"><b>Your
-                                            Acount</b></a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="/wap_project/login.html">Account</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="/wap_project/login.html">orders</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="/wap_project/login.html">Recommendations</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="/wap_project/login.html">orders</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="/wap_project/login.html">Browsing History</a>
-                                </li>
-                            </div>
+                       </a> 
                     </div>
-                    </ul>
+                        
                 </div>
                 <div>
-                    <button class="cart" style="margin-left: 100px;"><img src="images/cart.jpg"
+                    <button class="cart" style="margin-left: 100px;"><img src="../images/cart.jpg"
                             style="max-width: 70px; "></button>
                 </div>
             </nav>
-
 </body>
 
 </html>

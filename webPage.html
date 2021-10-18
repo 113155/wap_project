@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Web Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.myBlog {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.myBlog a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.myBlog a:hover {
+  background-color: #ddd;
+  color: blue;
+}
+.myBlog{
+  background-color: green;
+  color: blue;
+ 
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 66.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column2 {
+  float: right;
+  width: 33.33%;
+  padding: 15px;
+}
+img{
+    float: left;
+}
+/* Clear floats after the columns */
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row2 h3{
+    border-bottom: 4px solid black;
+}
+#idMore{
+    background-color: lightskyblue;
+}  
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="myBlog">
+  <a href="directory/birhan.html">BidhanTech Blog</a>
+  <a href="directory/home.html">HOME</a>
+  <a href="directory/recentPosts.html">RECENT POSTS</a>
+  <a href="directory/blog.html">BLOG</a>
+  <a href="directory/aboutMe.html">ABOUT ME</a>
+  <a href="directory/contactMe.html">CONTACT ME</a>
+</div>
+
+<div class="column">
+  <div class="row">
+    <h3>A Timeline of Programming Languages</h3>
+    <p>Written by: Historian Date: Thursday, 28 July 2011</p>
+    <p><a href="https://devskiller.com/history-of-programming-languages/"><img src="https://devskiller.com/wp-content/uploads/2020/07/History-of-programming-languages.jpg" width="100px" height="100px"></a>Here is a short history of programming languages complete with some illustrations and some background. It's fun, it's educational and it's free.
+
+    The history of programming languages is fascinating but it can be difficult to put it into any sort of order that  makes sense easily.  Now Rackspace has been kind enough to put together a graphic showing the languages along with some context. It has to be pointed out that there are some oddities and the selection of languages is fairly personal. <a href="https://www.i-programmer.info/history/computer-languages/2795-programming-language-infographic.html" target="_self"><input type="button" id="idMore" value="Read More →"></a> </p>
+  </div>
+  
+  <div class="row">
+    <h3>Java</h3>
+    <p>Written by: Lewis Stowe Date: October 21, 2020 </p>
+    <p><a href="https://devskiller.com/history-of-programming-languages/"><img src="https://devskiller.com/wp-content/uploads/2020/07/Java-history-of-programming-languages-670x335.jpg" width="100px" height="100px"></a>The need for Java developers is on the rise. Java continues to be the most or one the most popular programming languages. It is a leader in mobile platforms (Android applications are built with Java) and there is a shortage of engineers with Java coding skills. All of that affects the job market and the average Java developer salary. Let us take a closer look at what Java developers do and why there is such a demand for their expertise. <a href="https://devskiller.com/java-developer-salary/" target="_self"><input type="button" id="idMore" value="Read More →"></a> </p>
+    </p>
+  </div>
+  
+  <div class="row">
+    <h3>What is JavaScript?</h3>
+    <p>Written by: Mateusz Rojecki Date: October 21, 2020 </p>
+    <p><a href="https://devskiller.com/history-of-programming-languages/"><img src="https://devskiller.com/wp-content/uploads/2020/07/JavaScript-history-of-programming-langauges.png" width="100px" height="100px"></a>     
+    JavaScript (also known as JS) is high-level, prototype-based, untyped, dynamic language. Depending on the environment JavaScript can be interpreted or compiled. It is a multi-paradigm programming language, supporting object-oriented, imperative and functional programming styles.
+        
+    JavaScript started as a browser-only language, adding many possibilities for enhancing websites already written with HTML and CSS. In 2009 everything changed. Now, JavaScript can be used anywhere (literally everywhere, even in spacesuits) because of Node.js – which is JavaScript runtime environment based on Google’s V8 JavaScript Engine. Applications written in JavaScript can be very fast if they are made by skilled developers. Because of very low entry level into JavaScript world, it’s now one of most popular languages in use.<a href="https://devskiller.com/how-to-screen-javascript-developer-skills-find-the-best-guide-for-it-recruitment/" target="_self"><input type="button" id="idMore" value="Read More →"></a> </p>
+  </div>
+
+</div>
+<div class="column2">
+    <div class="row2">
+        <h3>Search</h3>
+        <label>Search for:</label>
+        <input type="text" id="searchId" value="search..">
+        <input type="button" value="search" onclick="search(this)">
+    </div>
+    <div class="row2">
+        <h3>Recent Posts</h3>
+        <p>A Timeline of Programming Languages</p>
+        <p>Java</p>
+        <p>What is JavaScript?</p>
+       
+    </div>
+    <div class="row2">
+        <h3>Pages</h3>
+        <p>About Me</p>
+        <p>Contact Me</p>
+        <p>Cookies & Privacy Policy</p>
+        <p>Terms & Conditions</p>
+    </div>
+    <div class="row2">
+        <h3>Categories</h3>
+        <p>Blog Post</p>
+        <p>Example Post</p>
+        <p>Nature</p>
+    </div>
+    <div class="row2">
+        <h3>Recent Posts</h3>
+        <p>A Timeline of Programming Languages</p>
+        <p>Java</p>
+        <p>What is JavaScript?</p>
+    </div>
+</div>
+<script>
+    function search(fieldText){
+        var count=0;
+        let text = document.querySelectorAll("row p").innerText.split(" ");
+        //let str = text.split(" ");
+        let arr=[];
+        arr.push(text);
+        for(let elem of arr){
+        if(elem==fieldText)
+        count++;
+        }
+       let result = count>1?"There are " + count + " " + fieldText : "There is " + count + " " + fieldText;
+       alert(result);
+    }
+    search("fun")
+</script>
+</body>
+</html>
+
