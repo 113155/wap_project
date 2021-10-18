@@ -14,13 +14,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <style>
-        .header {
-            display: flex;
-            align-items: flex-start;
-            background-color: #090522e1;
-            height: 70px;
-        }
-
         .formContainer {
             width: 400px;
             margin: auto;
@@ -36,22 +29,10 @@
             padding: 20px;
         }
 
-        .footer {
-            background-color: black;
-            color: white;
-            font-size: small;
-            text-align: center;
-            vertical-align: auto;
-            padding: 15px;
-        }
-
-        .footer>a {
-            color: white;
-        }
     </style>
     <script>
         $(function () {
-            $('#header').load("header.html");
+            $('#header2').load("header2.html");
             $('#footer').load("footer.html");
         });
         function createAccount() {
@@ -66,8 +47,9 @@
             { name: "Steph Payton", email: "stephpayton@gmail.com", password: "Steph@30", role: "Customer" }
         ];
 
+
         function submit() {
-            // alert(document.getElementById("email").value);
+            
             let email = document.getElementById("email").value;
             let pass = document.getElementById("password").value;
             let person = people.filter(function (item, index) {
@@ -146,7 +128,7 @@
                     </label>
                 </div>
                 <div class="d-grid gap-2 mb-3">
-                    <input class="btn btn-warning btn-lg" type="submit" value="Log in" onclick="submit()">
+                    <input class="btn btn-warning btn-lg" type="button" value="Log in" ">
                 </div>
                 <p>By creating an account you agree to Amazon's <a
                         href="https://www.amazon.com/gp/aw/help/ref=ap_mobile_register_notification_condition_of_use?id=508088"
@@ -155,25 +137,9 @@
                         href="https://www.amazon.com/gp/aw/help/ref=ap_mobile_signin_notification_privacy_notice?id=468496"
                         style="color: dodgerblue;">Privacy Notice</a>.</p>
 
-
-
             </form>
-
         </div>
-      
         <div id="footer"></div>
-
-    </div>
-
-    Registration Form
-    <div>
-        <a href="login.html">Login</a>
-    </div>
-
-    <div>
-        <h4>Project Tasks</h4>
-        w3d2Assignment Registration Form
-        On the Preview Page, show login button that will take the User to Login Screen.
     </div>
 
 </body>
