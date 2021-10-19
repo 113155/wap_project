@@ -1,3 +1,4 @@
+
 window.onload = addProduct;
   var array = [
     {
@@ -200,4 +201,5 @@ function filterInRange5() {
 
 JSON.stringify(filteredArray);
  buildCards(filteredArray);
+
 }
