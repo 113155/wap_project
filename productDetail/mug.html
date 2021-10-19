@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product View</title>
+    <title>Mug</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -22,35 +22,43 @@
         $("#footer").load("../footer.html");
       });
     </script>
+     <style>
+      .productContainer{
+        display: flex;
+        padding: 30px;
+        gap:30px;
+      }
+      .myClass{
+        margin-bottom: 30px;
+        margin-left: 650px;
+      }
+    </style>
   </head>
  <body>
 
-      <div class="position-sticky top-0" style="z-index: 4;" id="header2">      
+      <div class="position-sticky top-0" style="z-index: 4;" id="header2"></div>
+      <div class="productContainer">
+        <div>
+          <img src="../images/mug.jpg" style="width:350px; height:400px;">
+        </div>
+        <div>
+        <h3>Team Name: New England Patriots</h3> 
+        <p>  New England Patriots $28.95</p>
+        <p> Dallas Cowboys $28.95</p>     
+        <p>   Brand	Boelter Brands</p> 
+        <p>Item Weight	1 Pounds</p> 
+        <p>  Capacity	13.92 Ounces</p> 
+        <p>     About this item</p> 
+        <p>      Holds up to 14-ounces of Your Favorite Hot Beverage</p> 
+        <p>     Made of Strong Ceramic Construction</p> 
+        <p>  Decorated with Vibrant Team Colored Graphics</p> 
+        <p> 
+          Handle Decorated with Team Wordmark</p>
+          <p>  Microwave and Dishwasher Safe</p>
+        </div>
       </div>
-      <div>
-        <img src="../images/mug.jpg">
-      </div>
-      <div>
-      <h3>Team Name: New England Patriots</h3>        
-      New England Patriots
-      $28.95
-      Dallas Cowboys
-      $28.95
-      See all 27 options
-      Material	Ceramic
-      Color	Navy Blue
-      Brand	Boelter Brands
-      Item Weight	1 Pounds
-      Capacity	13.92 Ounces
-      About this item
-      Holds up to 14-ounces of Your Favorite Hot Beverage
-      Made of Strong Ceramic Construction
-      Decorated with Vibrant Team Colored Graphics
-      Handle Decorated with Team Wordmark
-      Microwave and Dishwasher Safe
-      </div>
-    
-    <div id="footer"></div>
+    <a href="shoppingCart.html"><button class="btn btn-warning myClass">Add to cart</button></a>  
+    <div id="footer" style="position: relative; top: 50px;"></div>
   </body>
 </html>
 

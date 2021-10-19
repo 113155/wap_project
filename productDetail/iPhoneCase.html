@@ -1,51 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product View</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      $(function () {
-        $("#header2").load("../header2.html");
 
-        $("#footer").load("../footer.html");
-      });
-    </script>
-  </head>
- <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iphone case</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      $("#header2").load("../header2.html");
 
-      <div class="position-sticky top-0" style="z-index: 4;" id="header2">      
-      </div>
-      <div>
-        <img src="../images/iPhone13Case.jpg">
-      </div>
-      <div>
-      <h3>Compatible Phone Models	Iphone 13</h3>
-      Brand	Qbool
-      Color	Light Blue
-      Material	Silicone
-      Form Factor	Bumper
-      About this item
-      SUITABLE MODEL - Specially designed for iPhone 13 case, precise cutouts retain the functions of all buttons and ports, and this protective case for iPhone 13 fits your smartphone perfectly, protecting the phone while not affecting its normal use
-      FULL BODY PROTECTION - Full body cover phone case for iPhone 13, soft silicone, raised edges around the camera and the phone screen provide as much cushioning protection as possible when the phone is dropped, preventing your phone from shock, bumps and hard-hits
-      MICROFIBER LINING - The lining of protective bumper case for iPhone 13 is made of premium and soft microfiber, which is shockproof and anti-scratch to protect the back cover of phone, it provides comprehensive protection and meets your needs better than other cell phone cases
-      COMFORTABLE TOUCH - Made of soft silicone, this case compatible with iPhone 13 is ultra thin and lightweight, giving you a different using experience with a unique soft touch, and the nonslip silicone case for iPhone 13 is not easy to turn yellow and aging
-      EASY INSTALLATION - Shockproof protective case for iPhone 13 is easy to install and peel off, there are various colors suitable for men, women, teen boys and girls; if you are not satisfied with our cell phone protective case, please do not hesitate to contact us
+      $("#footer").load("../footer.html");
+    });
+  </script>
+  <style>
+    .productContainer {
+      display: flex;
+      padding: 30px;
+      gap: 30px;
 
-      </div>
-    
-    <div id="footer"></div>
-  </body>
+    }
+
+    .myClass{
+      margin-bottom: 30px;
+      margin-left: 650px;
+    }
+  </style>
+</head>
+<body>
+  <div class="position-sticky top-0" style="z-index: 4;" id="header2"></div>
+  <div class="productContainer">
+    <div>
+      <img src="../images/iPhone13Case.jpg">
+    </div>
+    <div>
+      <h3>Compatible Phone Models Iphone 13</h3>
+      <p>Brand Qbool</p>
+      <p>Color Light Blue</p>
+      <p> Material Silicone</p>
+      <p>Form Factor Bumper</p>
+      <p>About this item</p>
+      <p>SUITABLE MODEL - Specially designed for iPhone 13 case, precise cutouts retain the functions of all buttons and
+        ports, and this protective case for iPhone 13 fits your smartphone perfectly, protecting the phone while not
+        affecting its normal use</p>
+      <p>FULL BODY PROTECTION - Full body cover phone case for iPhone 13, soft silicone, raised edges around the camera and
+        the phone screen provide as much cushioning protection as possible when the phone is dropped, preventing your
+        phone from shock, bumps and hard-hits</p>
+      <p>  MICROFIBER LINING - The lining of protective bumper case for iPhone 13 is made of premium and soft microfiber,
+        which is shockproof and anti-scratch to protect the back cover of phone, it provides comprehensive protection and
+        meets your needs better than other cell phone cases</p>
+      <p>    COMFORTABLE TOUCH - Made of soft silicone, this case compatible with iPhone 13 is ultra thin and lightweight,
+        giving you a different using experience with a unique soft touch, and the nonslip silicone case for iPhone 13 is
+        not easy to turn yellow and aging</p>
+        <p>
+          EASY INSTALLATION - Shockproof protective case for iPhone 13 is easy to install and peel off, there are various
+          colors suitable for men, women, teen boys and girls; if you are not satisfied with our cell phone protective case,
+          please do not hesitate to contact us</p>
+    </div>
+  </div>
+  <a href="shoppingCart.html"><button class="btn btn-warning myClass">Add to cart</button></a>
+  <div id="footer"></div>
+</body>
 </html>
-

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product View</title>
+    <title>Jacket</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -22,35 +22,41 @@
         $("#footer").load("../footer.html");
       });
     </script>
+      <style>
+        .productContainer{
+          display: flex;
+          padding: 30px;
+          gap:30px;
+        }
+        .myClass{
+        margin-bottom: 30px;
+        margin-left: 650px;
+      }
+      </style>
   </head>
  <body>
-      <div class="position-sticky top-0" style="z-index: 4;" id="header2">      
-      </div>
-      <div>
-        <img src="../images/jacket.jpg">
-      </div>
-      <div>
-        <h3>Jacket</h3>
-        Size: Medium
-        Medium
-        $79.99
-        Small
-        $79.99
-        Large
-        $79.99
-        Large Tall
-        $89.99
-        See all 13 options
-        100% Cotton
-        Imported
-        Flannel lined and rugged cotton suede look
-        Features antique brass Legendary snaps
-        Legendary Signature Buck appliqué
-        Double needle stitching and hand warmer side pockets
-        New (2) from $79.99 & FREE Shipping.
-      </div>
-    
-    <div id="footer"></div>
+      <div class="position-sticky top-0" style="z-index: 4;" id="header2"></div>
+      <div class="productContainer">
+        <div>
+          <img src="../images/jacket.jpg">
+        </div>
+        <div>
+          <h3>Jacket</h3>
+          <p>  Medium $79.99</p>
+          <p>  Small $79.99</p>
+          <p> Large  $79.99</p>
+          <p>   Large Tall  $89.99</p>
+          <p>100% Cotton</p>
+          <p>    Flannel lined and rugged cotton suede look</p>
+          <p> Features antique brass Legendary snaps</p>
+          <p>   Legendary Signature Buck appliqué</p>
+          <p>    Double needle stitching and hand warmer side pockets</p>
+          <p>    New (2) from $79.99 & FREE Shipping.</p>
+          <p></p>
+        </div>
+      </div> 
+    <a href="shoppingCart.html"><button class="btn btn-warning myClass">Add to cart</button></a>   
+    <div id="footer" style="position: relative; top: 80px;"></div>
   </body>
 </html>
 

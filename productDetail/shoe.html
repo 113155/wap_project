@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product View</title>
+    <title>Shoes</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -22,38 +22,37 @@
         $("#footer").load("../footer.html");
       });
     </script>
+      <style>
+        .productContainer{
+          display: flex;
+          padding: 30px;
+          gap:30px;
+        }
+        .myClass{
+        margin-bottom: 30px;
+        margin-left: 650px;
+      }
+      </style>
   </head>
  <body>
-      <div class="position-sticky top-0" style="z-index: 4;" id="header2">      
+      <div class="position-sticky top-0" style="z-index: 4;" id="header2"></div>
+      <div class="productContainer">
+        <div>
+          <img src="../images/shoes.jpg">
+        </div>
+        <div>
+          <p>Price:	$27.89 - $95.82</p>
+          <p>    Free Returns on some sizes and colors</p>
+          <p>  Color: Black</p>
+          <p>     Macadamis Mini Cheetah Printed Suede</p>
+          <p> Rubber sole</p>
+          <p>    TOMS casual flat with smoking slipper-inspired pattern</p>
+          <p>    Stacked wrapped min-wedge</p>
+          <p>          OrthoLite Eco LT Hybrid insole made with 26% eco content</p>
+        </div>
       </div>
-      <div>
-        <img src="../images/shoes.jpg">
-      </div>
-      <div>
-                Price:	$27.89 - $95.82
-        Free Returns on some sizes and colors
-        Size:
-
-        Select
-        Select
-        Color: Black
-
-        Black
-        
-
-        Macadamis Mini Cheetah Printed Suede
-        
-
-        Macadamia Mini Cheetah Printed Suede
-        Size Chart 
-        Rubber sole
-        TOMS casual flat with smoking slipper-inspired pattern
-        Stacked wrapped min-wedge
-        OrthoLite Eco LT Hybrid insole made with 26% eco content
-
-      </div>
-    
-    <div id="footer"></div>
+    <a href="shoppingCart.html"><button class="btn btn-warning myClass">Add to cart</button></a> 
+    <div id="footer" style="position: relative; top: 210px;"></div>
   </body>
 </html>
 
