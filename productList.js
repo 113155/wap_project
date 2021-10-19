@@ -116,7 +116,6 @@ window.onload = addProduct;
   function addProduct() {
     buildCards(array)
   }
-  
   function buildCards(arr) {
   
     let cards = document.getElementById("cards");
