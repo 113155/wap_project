@@ -56,6 +56,10 @@
       Description:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
       <input type="text" value="" id="description" />
     </p>
+    <p>
+      imageName:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+      <input type="text" id="itemImage" />   
+    </p>
     <label id="mode" hidden></label>
     <p>
       <input type="submit" value="Add" class="addButton" onclick="add()">
@@ -73,7 +77,8 @@
       <th>Brand</th>
       <th>Id</th>
       <th>Rating</th> 
-      <th>Description</th> 
+      <th>Description</th>
+      <th>Image</th>
       <th>Edit</th>
       <th>Delete</th>
     </tr>
@@ -82,7 +87,7 @@
  <script>
     var array = [];
     var index = 0;
-    var idsOfInputs = ["itemName", "category", "quantity", "price", "brand", "Id", "ratings", "description"];
+    var idsOfInputs = ["itemName", "category", "quantity", "price", "brand", "Id", "ratings", "description", "itemImage"];
     
     function createEditButton(){
       let editTd = document.createElement("td");
