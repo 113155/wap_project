@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product View</title>
+    <title>Dog rope</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -22,21 +22,35 @@
         $("#footer").load("../footer.html");
       });
     </script>
+    <style>
+      .productContainer{
+        display: flex;
+        padding: 30px;
+        gap:30px;
+      }
+      .myClass{
+        margin-bottom: 30px;
+        margin-left: 650px;
+      }
+    </style>
   </head>
   <body>
     <div class="position-sticky top-0" style="z-index: 4" id="header2"></div>
-    <div>
-      <img src="../images/pet.jpg">
+    <div class="productContainer">
+      <div>
+        <img src="../images/pet.jpg">
+      </div>
+      <div>
+        <h3>Dog Rope</h3>
+        <p>Price: $20.80 Get Fast</p> 
+        <p>Free Shipping with Amazon Prime & FREE Returns</p> 
+        <p>Coupon Save an extra 40% when you apply this coupon.</p> 
+        <p> Details Get $50 off instantly: Pay $0.00 $20.80 upon approval for the Amazon Rewards Visa Card.</p>
+        <p>No annual fee. Pet toy type Chew Toy Target Species Dog Theme
+          Animals Brand QiLongHao Is Waterproof 是</p> 
+      </div>
     </div>
-    <div>
-      <h3>Dog Rope</h3>
-      Price: $20.80 Get Fast, Free Shipping with Amazon Prime & FREE Returns
-      Coupon Save an extra 40% when you apply this coupon. Details Get $50 off
-      instantly: Pay $0.00 $20.80 upon approval for the Amazon Rewards Visa
-      Card. No annual fee. Pet toy type Chew Toy Target Species Dog Theme
-      Animals Brand QiLongHao Is Waterproof 是
-    </div>
-
-    <div id="footer"></div>
+    <a href="shoppingCart.html"><button class="btn btn-warning myClass">Add to cart</button></a>
+    <div id="footer" style="position: relative; top:300px;"></div>
   </body>
 </html>
