@@ -140,7 +140,6 @@ window.onload = addProduct;
   
     cards.innerHTML = html;
   }
-  
   let newArray = [...array];
   var modal = document.getElementById("iddd");
 
